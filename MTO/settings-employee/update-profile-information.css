@@ -1,0 +1,101 @@
+
+.main-content-edit {
+    width: 100%; /* Adjust to fit the main content page better */
+    max-width: 1200px; /* Limit width for larger screens */
+    padding: 20px; /* Reduce padding for a cleaner fit */
+    background-color: #F5F5F5;
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 20px; /* Adjust for reduced spacing at the top */
+    flex-grow: 1;
+    border-radius: 8px; /* Keep rounded corners */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtler shadow for depth */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px; /* Reduce spacing for a tighter layout */
+    font-size: 24px;
+    color: #007bff;
+}
+
+h3 {
+    text-align: center;
+    color: #333; /* Slightly darker color for better contrast */
+    margin-bottom: 20px; /* Add space below headings */
+}
+
+#forms {
+    display: flex;
+    flex-direction: column;
+}
+
+#basic-info {
+    border: 1px solid #A7A7A7;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+label {
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 20px; /* Space between label and input */
+    float: inline-start;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    width: 100%; /* Full width for better alignment */
+    margin-bottom: 20px;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.submit-button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.welcome-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 600px;
+    text-align: center;
+}
+
+    
+
+.welcome-section h1 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.welcome-section p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: gray;
+}

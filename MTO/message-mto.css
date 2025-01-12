@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    height: 100vh;
+}
+
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+
+.sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    height: 100vh; /* Full height of the viewport */
+    position: fixed; /* Fix the sidebar in place */
+    top: 0;
+    left: 0;
+    overflow: auto; /* Scroll within the sidebar if needed */
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li:hover {
+    background-color: #e9ecef;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+}
+
+.sidebar ul li.active {
+    background-color: #d1e7ff;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px; /* Match the sidebar width */
+    padding: 20px;
+    flex: 1;
+    background-color: #fff;
+    overflow: auto;
+    height: 100vh; /* Ensure the content takes the full height */
+}
+
+#tab{
+    margin-top: 20px;
+    margin-bottom: 18px;
+    font-style: italic;
+    font-size: 16px;
+    opacity: 60%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    }
+
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons i {
+    font-size: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+img{
+    width: 50%;
+    margin-left: 40px;    
+}
+
+.mail-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.mail-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.mail-container form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.mail-container form select,
+.mail-container form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.mail-container form .compose-area {
+    height: 150px;
+    resize: none;
+}
+
+.attachments {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.attachments div i {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.send-btn {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.send-btn:hover {
+    background-color: #0056b3;
+}
+
+#tab{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-style: italic;
+    font-size: 16px;
+    opacity: 60%;
+}
+
+
+.dropdown-container a {
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+}
+
+.dropdown-container a:hover{
+    background-color: #e9ecef;
+
+}
+
+.dropdown-container {
+    display: none;
+    padding-left: 15px;
+}
+
+.dropdown-btn {
+    cursor: pointer;
+}
+
+.dropdown-btn:after {
+    content: '\25BC';
+    float: right;
+    margin-left: 5px;
+}
+
+.dropdown-btn.active:after {
+    content: '\25B2';
+}
+
+.dropdown-btn.active + .dropdown-container {
+    display: block;
+}
+
+
+
+/* Style for the calendar container */
+#calendar-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style for the date input */
+#scheduled_date {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus state for the date input */
+#scheduled_date:focus {
+    border-color: #4CAF50;  /* Green color on focus */
+    background-color: #fff; /* White background on focus */
+}
+
+/* Style for the label text */
+#calendar-container label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Add some spacing between the input and other form elements */
+.form-control {
+    margin-bottom: 15px;
+}
+
+/* For the send button (optional improvement) */
+/* Change background on hover */
+/* Styling for the textarea */
+textarea.compose-area {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Responsive Styles */
+.menu-toggle {
+    display: none; /* Hide the toggle button by default */
+    font-size: 24px; /* Increase the font size for visibility */
+    cursor: pointer;
+}
+
+.close-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #000; /* Adjust color as needed */
+    cursor: pointer;
+    margin-bottom: 20px; /* Space below the button */
+    position: absolute; /* Positioning it inside the sidebar */
+    top: 20px; /* Adjust to desired position */
+    right: 20px; /* Adjust to desired position */
+}
+
+
+
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .sidebar {
+        display: none; /* Hide the sidebar by default on small screens */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the toggle button on small screens */
+        background: transparent;
+        border: none;
+        color: black; /* Change color as needed */
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove the margin for main content on small screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+    
+
+}
+
+.sidebar.active {
+    display: block; /* Show sidebar when active */
+    position: fixed; /* Keep it fixed */
+    z-index: 10; /* Make sure it appears above other content */
+    height: 100vh; /* Full height */
+}
+
+.sidebar.active .close-btn {
+    display: block; /* Show close button when sidebar is active */
+}
+

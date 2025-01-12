@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.main-content {
+    display: flex;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.recipient {
+    width: 30%;
+    border-right: 1px solid #ddd;
+    padding-right: 20px;
+}
+
+.resort-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resort-list li {
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.resort-list li:hover {
+    background-color: #e0e0e0;
+}
+
+.message-content {
+    width: 70%;
+    padding-left: 20px;
+}
+
+.message-header h2 {
+    margin-top: 0;
+}
+
+.message {
+    margin-bottom: 20px;
+}
+
+.message p {
+    margin: 5px 0;
+}

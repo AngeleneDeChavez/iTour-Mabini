@@ -1,0 +1,401 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;  /* Ensure the body takes full screen height */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    height: 100vh;  /* Full height of viewport */
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Scroll within sidebar */
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li:hover {
+    background-color: #e9ecef;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+}
+
+.sidebar ul li.active {
+    background-color: #d1e7ff;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px; /* Adjust to sidebar width */
+    padding: 20px;
+    flex: 1;
+    background-color: #fff;
+    overflow-y: auto; /* Prevent overflow */
+    height: 100vh; /* Full height of viewport */
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-box button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons i {
+    font-size: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* Table */
+.reportTable {
+    margin-top: 30px;
+    max-height: 400px;
+    overflow: auto;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Scrollbars */
+.reportTable::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    }
+    
+    .reportTable::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    }
+    
+    .reportTable::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    }
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f5f5f5;
+    min-width: 300px;
+    z-index: 1;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 99, 71, 0.8);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Text Sections */
+#hello {
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 70px;
+}
+
+
+
+
+#tab {
+    margin-top: 20px;
+    margin-bottom: -10px;
+    font-style: italic;
+    font-size: 16px;
+    opacity: 60%;
+}
+
+.month{
+    border: 1px solid black;
+    text-align: center;
+    font-size: 30px;
+    width: 300px;
+    margin: 20px 0px;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+select{
+    width: 270px;
+    font-size: 40px;
+    border: none;
+}
+
+select option{
+    font-size: 15px;
+    text-align: center;
+}
+
+#submit-report {
+    font-size: 20px;
+    background-color: rgb(30, 109, 200);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 200px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    align-self: flex-end;
+}
+
+/* Responsive Image */
+img {
+    width: 50%;
+    margin-left: 40px;
+}
+
+.dropdown-container a {
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+}
+
+.dropdown-container a:hover{
+    background-color: #e9ecef;
+
+}
+
+.dropdown-container {
+    display: none;
+    padding-left: 15px;
+}
+
+.dropdown-btn {
+    cursor: pointer;
+}
+
+.dropdown-btn:after {
+    content: '\25BC';
+    float: right;
+    margin-left: 5px;
+}
+
+.dropdown-btn.active:after {
+    content: '\25B2';
+}
+
+.dropdown-btn.active + .dropdown-container {
+    display: block;
+}
+
+.export-btn {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.export-btn .btn {
+    background-color: #4CAF50; /* Green background */
+    color: white;              /* White text */
+    padding: 10px 20px;        /* Some padding */
+    font-size: 16px;           /* Text size */
+    border: none;              /* Remove border */
+    border-radius: 5px;        /* Rounded corners */
+    cursor: pointer;          /* Pointer on hover */
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.export-btn .btn i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.export-btn .btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.export-btn .btn:focus {
+    outline: none; /* Remove the outline on focus */
+}
+
+/* Responsive Styles */
+.menu-toggle {
+    display: none; /* Hide the toggle button by default */
+    font-size: 24px; /* Increase the font size for visibility */
+    cursor: pointer;
+}
+
+.close-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #000; /* Adjust color as needed */
+    cursor: pointer;
+    margin-bottom: 20px; /* Space below the button */
+    position: absolute; /* Positioning it inside the sidebar */
+    top: 20px; /* Adjust to desired position */
+    right: 20px; /* Adjust to desired position */
+}
+
+
+
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .sidebar {
+        display: none; /* Hide the sidebar by default on small screens */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the toggle button on small screens */
+        background: transparent;
+        border: none;
+        color: black; /* Change color as needed */
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove the margin for main content on small screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+    
+    .reportTable {
+        margin-top: 30px;
+        overflow: auto;
+        max-height: 500px;
+        max-width: 100%;
+        border: 1px solid #ccc;
+        }
+        
+    .search-box {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-box input {
+        padding: 10px;
+        width: 150px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    .search-box button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+}
+
+.sidebar.active {
+    display: block; /* Show sidebar when active */
+    position: fixed; /* Keep it fixed */
+    z-index: 10; /* Make sure it appears above other content */
+    height: 100vh; /* Full height */
+}
+
+.sidebar.active .close-btn {
+    display: block; /* Show close button when sidebar is active */
+}
+

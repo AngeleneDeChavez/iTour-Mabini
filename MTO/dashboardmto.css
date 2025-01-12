@@ -1,0 +1,484 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    height: 100%;
+}
+
+
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    height: 100vh; /* Full height of the viewport */
+     /* Fix the sidebar in place */
+    top: 0;
+    left: 0;
+    overflow: auto; /* Scroll within the sidebar if needed */
+}
+
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li:hover {
+    background-color: #e9ecef;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+}
+
+.sidebar ul li.active {
+    background-color: #d1e7ff;
+}
+
+/* Main Content */
+.main-content {
+  /* Match the sidebar width */
+    padding: 20px;
+    flex: 1;
+    background-color: #fff;
+    overflow: auto;
+    height: 100vh; /* Ensure the content takes the full height */
+}
+
+#tab{
+    margin-top: 20px;
+    margin-bottom: 18px;
+    font-style: italic;
+    font-size: 16px;
+    opacity: 60%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Topbar */
+.topbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #f5f5f5;
+padding: 10px 20px;
+border-bottom: 1px solid #ccc;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-box button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons i {
+    font-size: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+img{
+    width: 50%;
+    margin-left: 40px;    
+}
+
+/* Year and Month Filter Container */
+.filter-container {
+    display: flex;
+    gap: 20px; /* Space between the dropdowns */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center; /* Center the filters horizontally */
+    align-items: center;
+}
+
+/* Year and Month Filter Styling */
+#month, #year {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    width: 150px; /* Adjust width for consistency */
+}
+
+/* Adjust the font size and padding */
+#month, #year {
+    font-size: 16px;
+}
+
+
+/* Dashboard Layout */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+}
+
+.card {
+    display: flex;
+    width: 300px; /* Adjust the width as necessary */
+    height: 150px; /* Adjust the height as necessary */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.left-section {
+    background-color: #75afed; /* Blue color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%; /* Adjust width as needed */
+    color: white;
+}
+
+.left-section i {
+    font-size: 40px; /* Adjust icon size */
+}
+
+.right-section {
+    background-color: #fff; /* White color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%; /* Adjust width as needed */
+    color: black;
+}
+
+.right-section h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.right-section p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#month{
+    width: 300px;
+    height: 40px;
+}
+
+#monthbtn{
+    font-size: 15px;
+}
+/* Chart and Top Resorts container */
+.chart-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+
+/* Chart container styling */
+.chart-container {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.chart2{
+    margin-top: 20px;
+    width: 1200px;
+}
+
+.charts{
+    width: 430px;
+}
+
+
+.resort-card {
+    width: 300px;  /* Adjust as needed */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resort-header {
+    background-color: #75afed; /* Blue color */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    width: 100%; /* Full width */
+    color: white;
+    padding: 20px; /* Add some padding around the header */
+}
+
+.resort-header i {
+    font-size: 100px; /* Icon size */
+    margin-bottom: 10px; /* Space between icon and title */
+}
+
+.resort-content {
+    background-color: white;
+    padding: 15px;
+}
+
+.resort-content h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resort-content ul {
+    list-style-type: disc; /* Ensures bullets are displayed */
+    padding-left: 20px; /* Indentation for the list */
+}
+
+.resort-content li {
+    margin-bottom: 5px; /* Space between list items */
+    font-size: 16px; /* Adjust text size */
+    color: #333; /* Dark color for the text */
+}
+
+
+  .dropdown-container a {
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+}
+
+.dropdown-container a:hover{
+    background-color: #e9ecef;
+
+}
+
+.dropdown-container {
+    display: none;
+    padding-left: 15px;
+}
+
+.dropdown-btn {
+    cursor: pointer;
+}
+
+.dropdown-btn:after {
+    content: '\25BC';
+    float: right;
+    margin-left: 5px;
+}
+
+.dropdown-btn.active:after {
+    content: '\25B2';
+}
+
+.dropdown-btn.active + .dropdown-container {
+    display: block;
+}
+
+
+/* Responsive Styles */
+.menu-toggle {
+    display: none; /* Hide the toggle button by default */
+    font-size: 24px; /* Increase the font size for visibility */
+    cursor: pointer;
+}
+
+.close-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #000; /* Adjust color as needed */
+    cursor: pointer;
+    margin-bottom: 20px; /* Space below the button */
+    position: absolute; /* Positioning it inside the sidebar */
+    top: 20px; /* Adjust to desired position */
+    right: 20px; /* Adjust to desired position */
+}
+
+
+
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .sidebar {
+        display: none; /* Hide the sidebar by default on small screens */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the toggle button on small screens */
+        background: transparent;
+        border: none;
+        color: black; /* Change color as needed */
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove the margin for main content on small screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+    
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #f5f5f5;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0);
+        z-index: 1;
+        text-align: center;
+        border: 1px solid rgb(0, 0, 0, 0.2);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #hello {
+        margin-top: 30px;
+        padding: 10px;
+        font-size: 50px;
+    
+    }
+
+    /* Card Layout */
+    .card-container {
+        flex-direction: column; /* Stack the cards vertically */
+        gap: 10px; /* Adjust the gap between cards */
+    }
+
+    .card {
+        width: 100%; /* Cards should take full width of the container */
+        max-width: 100%; /* Prevent any card from exceeding the container's width */
+        margin: 0; /* Remove margins for stacked cards */
+    }
+
+    /* Chart Layout */
+    .chart-section {
+        display: grid;
+        grid-template-columns: 1fr; /* Stack charts vertically */
+        gap: 20px;
+    }
+
+    .chart-container {
+        width: 100%; /* Ensure the chart containers take full width */
+    }
+
+    .charts {
+        width: 100%; /* Charts should take full width on smaller screens */
+    }
+
+    /* Resort Card Layout */
+    .card-container .resort-card {
+        width: 100%; /* Resort card should take full width */
+    }
+
+    /* Adjust dashboard layout for small screens */
+    .dashboard {
+        width: 100%; /* Ensure the dashboard spans full width */
+        align-items: stretch; /* Remove centering, allow elements to stretch */
+    }
+
+    /* Adjust the gap between cards */
+    .card-container {
+        gap: 10px; /* Reduce the gap to make more room on small screens */
+    }
+
+    /* Reduce width of charts for smaller screens */
+    .chart2 {
+        width: 100%; /* Ensure the chart scales with screen size */
+    }
+
+    .charts {
+        width: 100%; /* Ensure the charts adapt to screen width */
+    }
+    
+    .resort-card {
+        width: 100%;  /* Resort cards will take full width */
+    }
+
+    .chart-section {
+        grid-template-columns: 1fr; /* Stack chart sections on small screens */
+    }
+    
+    .filter-container {
+        flex-direction: column; /* Stack the filters vertically on small screens */
+        gap: 10px; /* Reduce the gap between the filters */
+        padding: 10px; /* Add padding around the filters */
+    }
+
+    #month, #year {
+        width: 100%; /* Make the filters take full width on small screens */
+    }
+    
+}
+
+.sidebar.active {
+    display: block; /* Show sidebar when active */
+    position: fixed; /* Keep it fixed */
+    z-index: 10; /* Make sure it appears above other content */
+    height: 100vh; /* Full height */
+}
+
+.sidebar.active .close-btn {
+    display: block; /* Show close button when sidebar is active */
+}
+

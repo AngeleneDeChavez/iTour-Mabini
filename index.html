@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>Travel Mabini</title>
+      
+      <style>
+          .nav a, .loginas, .user-icon{
+              color: white;
+          }
+      </style>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+           <a href="#" class="nav__logo">
+            Travel Mabini
+           </a>
+
+           <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+               <li class="nav__item">
+                  <a href="marker/viewmap.php" class="nav__link">View Map</a>
+               </li>
+
+               <li class="nav__item">
+                  <a href="#about" class="nav__link">Learn More</a>
+               </li>
+
+               <li class="nav__item">
+                  <a href="#popular" class="nav__link">About</a>
+               </li>
+
+               <li class="nav__item">
+                  <a href="#footer" class="nav__link">Contact</a>
+               </li>
+
+               <li class="nav__item">
+                  <a href="#" class="nav__link">
+                      <i class="ri-user-fill"></i>
+                  </a>
+                
+              
+                  <ul class="dropdown">
+                     <div class="user-icon">
+                        <i class="ri-user-fill"></i>
+                    </div>
+                    <p class="loginas">Log in as:</p>
+                      <li class="dropdown__item">
+                          <a href="login/login-admin-officer/login.php" class="dropdown__link">Admin</a>
+                      </li>
+                      <li class="dropdown__item">
+                          <a href="login/login-resort-staff/login.php" class="dropdown__link">Resort Staff</a>
+                      </li>
+                      <li class="dropdown__item">
+                          <a href="login/login-tourism-officer/login.php" class="dropdown__link">Tourism Officer</a>
+                      </li>
+                  </ul>
+              </li>
+              
+
+            </ul>
+
+
+
+            <div class="nav__close" id="nav-close">
+               <i class="ri-close-line"></i>
+            </div>
+           </div>
+
+           <!--toggle button-->
+           <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-fill"></i>
+           </div>
+
+         </nav>
+
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <!--==================== HOME ====================-->
+         <section class="home section" id="home">
+            <img src="assets/img/view.jpg" alt="home image" class="home__bg">
+            <div class="home__shadow"></div>
+
+            <div class="home__container container grid">
+               <div class="home__data">
+                  <h3 class="home__subtitle">Welcome</h3>
+
+                  <h1 class="home__title">Travel <br>Mabini</h1>
+
+                  <p class="home__description">
+                     Live the trips exploring the Mabini, discover 
+                     beaches, mountains and much 
+                     more, travel now.
+                  </p>
+
+                  <a href="marker/viewmap.php" class="button">
+                     View Map <i class="ri-arrow-right-line"></i>
+                  </a>
+               </div>
+
+               <div class="home__cards grid">
+                  <article class="home__card">
+                     <img src="assets/img/casa.jpg" alt="home image" class="home__card-img">
+                     <h3 class="home__card-title">Casa</h3>
+                     <div class="home__card-shadow"></div>
+                  </article>
+
+                  <article class="home__card">
+                     <img src="assets/img/eagle.jpg" alt="home image" class="home__card-img">
+                     <h3 class="home__card-title">Eagle</h3>
+                     <div class="home__card-shadow"></div>
+                  </article>
+
+                  <article class="home__card">
+                     <img src="assets/img/Masasa-Beach-Batangas-1.jpg" alt="home image" class="home__card-img">
+                     <h3 class="home__card-title">Masasa</h3>
+                     <div class="home__card-shadow"></div>
+                  </article>
+
+                  <article class="home__card">
+                     <img src="assets/img/sea-spring.jpg" alt="home image" class="home__card-img">
+                     <h3 class="home__card-title">Seas Spring</h3>
+                     <div class="home__card-shadow"></div>
+                  </article>
+
+               </div>
+            </div>
+         </section>
+
+         <!--==================== ABOUT ====================-->
+         <section class="about section" id="about">
+            <div class="about__container container grid">
+               <div class="about__data">
+                  <h2 class="section__title">
+                     Learn More <br>
+                     About Mabini Batangas
+                  </h2>
+
+                   <p class="about__description">
+                     Mabini, Batangas, is a scenic coastal municipality in the Philippines, 
+                     renowned for its natural beauty and diving spots. Located on the Calumpang 
+                     Peninsula by the Verde Island Passage, it boasts world-class dive sites, 
+                     vibrant coral reefs, and diverse marine life, making it a paradise for 
+                     divers and snorkelers. Anilao, a popular barangay within Mabini, is often 
+                     considered one of the top diving locations in the country. Beyond diving, 
+                     Mabini features stunning landscapes of Balayan and Batangas Bays, lush 
+                     hiking trails, and coastal resorts. Named after the revolutionary hero 
+                     Apolinario Mabini, this charming town is perfect for nature lovers and 
+                     adventure seekers alike.
+                   </p>
+
+                   <a href="marker/viewmap.php" class="button">
+                     Explore Mabini <i class="ri-arrow-right-line"></i>
+                   </a>
+               </div>
+
+               <div class="about__image">
+                  <img src="assets/img/mabinilogo.png" alt="about imgage" class="about__img">
+                  <div class="about__shadow"></div>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== POPULAR ====================-->
+         <section class="popular section" id="popular">
+            <h2 class="section__title">
+               Enjoy The Beauty <br>
+               Of Mabini
+            </h2>
+
+            <div class="popular__container container grid">
+               <article class="popular__card">
+                  <div class="popular__image">
+                     <img src="assets/img/casa.jpg" alt="popular image" class="popular__img">
+
+                       
+                     <div class="popular__shadow"></div>
+                  </div>
+
+                        <h2 class="popular__title">
+                           Mission
+                        </h2>
+
+                        <div class="popular__location">
+                           <i class="ri-flag-fill"></i>
+                           <span>To provide exceptional travel experiences by offering unique, sustainable, and culturally immersive tours that foster understanding and appreciation of the world’s diverse destinations.</span>
+                        </div>
+               </article>
+
+               <article class="popular__card">
+                  <div class="popular__image">
+                     <!--<img src="assets/img/Masasa-Beach-Batangas-1.jpg" alt="popular image" class="popular__img">-->
+
+                   
+
+                     <iframe id="youtubeVideo"
+                     class="popular__img"
+                     src="https://www.youtube.com/embed/hhoPddyxiNI?autoplay=1&enablejsapi=1&mute=1&loop=1&playlist=hhoPddyxiNI"
+                     title="Aerial Drone Shots of Mabini Batangas, Philippines"
+                     frameborder="0"
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                     referrerpolicy="strict-origin-when-cross-origin"
+                     allowfullscreen>
+                       </iframe>
+           
+           
+           
+             
+                     
+                     
+                     <div class="popular__shadow"></div>
+                  </div>
+                  <style>
+                     .popular__img {
+                           width: 100%; /* Make the iframe take the full width of its container */
+                           height: auto; /* Maintain aspect ratio */
+                           max-width: 800px; /* Optional: Set a max width */
+                           aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+                           border: none; /* Remove default border */
+                           border-radius: 8px; /* Optional: Add rounded corners */
+                           margin: 20px 0; /* Add some space above and below the iframe */
+                           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow for depth */
+                        }
+                  </style>
+
+                        <h2 class="popular__title">
+                           Vission
+                        </h2>
+
+                        <div class="popular__location">
+                           <i class="ri-flag-fill"></i>
+                           <span>To be the leading global provider of transformative travel experiences that connect people, cultures, and communities while championing sustainability and ethical tourism.</span>
+                  </div>
+               </article>
+
+               <article class="popular__card">
+                  <div class="popular__image">
+                     <img src="assets/img/sea-spring.jpg" alt="popular image" class="popular__img">
+                     <div class="popular__shadow"></div>
+                  </div>
+
+                        <h2 class="popular__title">
+                           Values
+                        </h2>
+
+                        <div class="popular__location">
+                           <i class="ri-flag-fill"></i>
+                           <span>Sustainability </br>
+                              Cultural Respect</br>
+                              Customer-Centricity</br>
+                              Integrity</br>
+                              Excellence</br>
+                           
+                           </span>
+                       
+                  </div>
+               </article>
+
+            </div>
+         </section>
+         
+         <!--==================== EXPLORE ====================-->
+         <section class="explore section" id="explore">
+            <div class="explore__container">
+               <div class="explore__image">
+              <img src="assets/img/view.jpg" alt="explore image" class="explore__img">
+                  
+                     <div class="explore__shadow"></div>
+               </div>
+
+               <div class="explore__content container grid">
+                  <div class="explore__data">
+                     <h2 class="section__title">
+                       Meet <br> 
+                        Our Team
+                     </h2>
+
+                     <p class="explore__description">
+                        
+                     </p>
+                  </div>
+               </div>
+
+              <!-- <div class="explore__user">
+                  <img src="assets/img/jella.jpg" alt="explore image" class="explore__perfil">
+                  <span class="explore__name">Trisha Mae J. Tecson</span>
+               </div>
+
+               <div class="explore__user">
+                  <img src="assets/img/angelene.jpg" alt="explore image" class="explore__perfil">
+                  <span class="explore__name">Angelene D. De Chavez</span>
+               </div>
+
+               <div class="explore__user">
+                  <img src="assets/img/angelene.jpg" alt="explore image" class="explore__perfil">
+                  <span class="explore__name">Jella D. Dalawampu</span>
+               </div>
+
+            </div>
+         </section>-->
+
+         <section class="team-section">
+           
+         
+            <div class="team-container">
+               <div class="team-card">
+                  <img src="assets/img/trisha.jpg" alt="profile" class="team-img">
+                  <h3 class="team-name">Trisha Mae J. Tecson</h3>
+                  <p class="team-position">Bachelor of Science in Information Technology</p>
+                  <p class="team-major">Major in Business Analytics<br>Batangas State University - TNEU</p>
+                  <p class="team-email">
+                     <i class="ri-mail-fill"></i>
+                     maetecson87@gmail.com
+                  </p>
+               </div>
+         
+               <div class="team-card">
+                  <img src="assets/img/angelene.jpg" alt="profile" class="team-img">
+                  <h3 class="team-name">Angelene D. De Chavez</h3>
+                  <p class="team-position">Bachelor of Science in Information Technology</p>
+                  <p class="team-major">Major in Business Analytics<br>Batangas State University - TNEU</p>
+                  <p class="team-email">
+                     <i class="ri-mail-fill"></i>
+                     dechavezangelene@gmail.com
+                  </p>
+               </div>
+         
+               <div class="team-card">
+                  <img src="assets/img/jella.jpg" alt="profile" class="team-img">
+                  <h3 class="team-name">Jella D. Dalawampu</h3>
+                  <p class="team-position">Bachelor of Science in Information Technology</p>
+                  <p class="team-major">Major in Business Analytics<br>Batangas State University - TNEU</p>
+                  <p class="team-email">
+                     <i class="ri-mail-fill"></i>
+                     jelladalawampu7@gmail.com
+                  </p>
+               </div>
+            </div>
+         </section>
+
+         
+         
+         <!--==================== JOIN ====================-->
+         <section class="join section">
+            
+         </section>
+      </main>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer" id="footer">
+            <div class="footer__container container grid">
+               <div class="container__content grid">
+                  <a href="#" class="footer__logo">
+                     Contact
+                  </a>
+
+                  <p class="footer__description">
+                     Email <br> 
+                     Phone Number
+                  </p>
+               </div>
+<!--
+               <div class="footer__data grid">
+                  <div>
+                  <h3 class="footer__title">About</h3>
+
+                     <ul class="footer__links">
+                        <li>
+                           <a href="#" class="footer__link">About Us</a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="footer__link">Features</a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="footer__link">News & Blog</a>
+                        </li>
+                     </ul>
+               
+               </div>
+
+               <div>
+                  <h3 class="footer__title">Company</h3>
+
+                     <ul class="footer__links">
+                        <li>
+                           <a href="#" class="footer__link">FAQs</a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="footer__link">History</a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="footer__link">Testimonials</a>
+                        </li>
+                     </ul>
+                  
+               </div>
+
+               <div>
+                  <h3 class="footer__title">Contact</h3>
+
+                     <ul class="footer__links">
+                        <li>
+                           <a href="#" class="footer__link">Call Center</a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="footer__link">Support Center</a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="footer__link">Contact Us</a>
+                        </li>
+                     </ul>
+                
+               </div>
+
+               <div>
+                  <h3 class="footer__title">Support</h3>
+
+                     <ul class="footer__links">
+                        <li>
+                           <a href="#" class="footer__link">Privacy Policy</a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="footer__link">Terms & Services</a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="footer__link">Payments</a>
+                        </li>
+                     </ul>
+               </div>
+            </div>
+         </div>
+
+         <div class="footer__group">
+            <div class="footer__social">
+               <a href="" target="_blank" class="footer__social-link">
+                  <i class="ri-facebook-line"></i>
+               </a>
+
+               <a href="" target="_blank" class="footer__social-link">
+                  <i class="ri-twitter-line"></i>
+               </a>
+
+               <a href="" target="_blank" class="footer__social-link">
+                  <i class="ri-instagram-line"></i>
+               </a>
+            </div>
+            
+            <span class="footer__copy">
+               &#169; Copyright Travel Mabini. All rights reserved
+            </span>
+         </div> 
+      </div> -->
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      <a href="#" class="scrollup show-scroll" id="scroll-up">
+         <i class="ri-arrow-up-line"></i>
+      </a>
+
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="assets/js/scrollreveal.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>

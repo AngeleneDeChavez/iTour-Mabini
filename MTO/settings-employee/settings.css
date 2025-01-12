@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    height: 100vh;
+}
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  height: 100vh; /* Full height of the viewport */
+  position: fixed; /* Fix the sidebar in place */
+  top: 0;
+  left: 0;
+  overflow: auto; /* Scroll within the sidebar if needed */
+}
+
+.sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.sidebar ul li:hover {
+  background-color: #e9ecef;
+}
+
+.sidebar ul li i {
+  margin-right: 10px;
+}
+
+.sidebar ul li.active {
+  background-color: #d1e7ff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.active{
+    border-radius: 5%;
+}
+
+.main-content {
+  margin-left: 250px; /* Match the sidebar width */
+  padding: 20px;
+  flex: 1;
+  background-color: #fff;
+  overflow: auto;
+  height: 100vh; /* Ensure the content takes the full height */
+}
+
+img{
+  width: 50%;
+  margin-left: 40px;    
+}
+
+/* Responsive Styles */
+.menu-toggle {
+  display: none; /* Hide the toggle button by default */
+  font-size: 24px; /* Increase the font size for visibility */
+  cursor: pointer;
+}
+
+.close-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #000; /* Adjust color as needed */
+  cursor: pointer;
+  margin-bottom: 20px; /* Space below the button */
+  position: absolute; /* Positioning it inside the sidebar */
+  top: 20px; /* Adjust to desired position */
+  right: 20px; /* Adjust to desired position */
+}
+
+
+
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+  .sidebar {
+      display: none; /* Hide the sidebar by default on small screens */
+  }
+
+  .menu-toggle {
+      display: block; /* Show the toggle button on small screens */
+      background: transparent;
+      border: none;
+      color: black; /* Change color as needed */
+  }
+
+  .main-content {
+      margin-left: 0; /* Remove the margin for main content on small screens */
+      padding: 10px; /* Adjust padding for smaller screens */
+  }
+  
+}
+
+.sidebar.active {
+  display: block; /* Show sidebar when active */
+  position: fixed; /* Keep it fixed */
+  z-index: 10; /* Make sure it appears above other content */
+  height: 100vh; /* Full height */
+}
+
+.sidebar.active .close-btn {
+  display: block; /* Show close button when sidebar is active */
+}
+

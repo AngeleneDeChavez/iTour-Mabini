@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    height: 100%;
+}
+
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    height: 100vh; /* Full height of the viewport */
+    position: fixed; /* Fix the sidebar in place */
+    top: 0;
+    left: 0;
+    overflow: auto; /* Scroll within the sidebar if needed */
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li:hover {
+    background-color: #e9ecef;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+}
+
+.sidebar ul li.active {
+    background-color: #d1e7ff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px; /* Match the sidebar width */
+    padding: 20px;
+    flex: 1;
+    background-color: #fff;
+    overflow: auto;
+    height: 100vh; /* Ensure the content takes the full height */
+}
+
+#tab {
+    margin-top: 20px;
+    margin-bottom: -10px;
+    font-style: italic;
+    font-size: 16px;
+    opacity: 60%;
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+#notif{
+    margin-right: 15px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons i {
+    font-size: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+img {
+    width: 50%;
+    margin-left: 40px;
+}
+
+/* Dropdown menu */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f5f5f5;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0);
+    z-index: 1;
+    text-align: center;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#hello {
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 70px;
+
+}
+
+
+
+.dropdown-content a {
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 20px;
+    background-color: white;
+    margin: 20px;
+    font-size: 20px;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 99, 71, 0.8);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; 
+}
+
+
+#form-name {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+
+#required {
+    color: red;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.half-width {
+    grid-column: span 2;
+}
+
+.submit-btn {
+    display: block;
+    margin: 0 auto;
+    background-color: #004eae;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.submit-btn:hover {
+    background-color: #000589;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Responsive Styles */
+.menu-toggle {
+    display: none; /* Hide the toggle button by default */
+    font-size: 24px; /* Increase the font size for visibility */
+    cursor: pointer;
+}
+
+.close-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #000; /* Adjust color as needed */
+    cursor: pointer;
+    margin-bottom: 20px; /* Space below the button */
+    position: absolute; /* Positioning it inside the sidebar */
+    top: 20px; /* Adjust to desired position */
+    right: 20px; /* Adjust to desired position */
+}
+
+
+
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .sidebar {
+        display: none; /* Hide the sidebar by default on small screens */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the toggle button on small screens */
+        background: transparent;
+        border: none;
+        color: black; /* Change color as needed */
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove the margin for main content on small screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    
+    #form-name{
+        font-size: 20px;
+    }
+
+    label{
+        font-size: 13px;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #f5f5f5;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0);
+        z-index: 1;
+        text-align: center;
+        border: 1px solid rgb(0, 0, 0, 0.2);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #hello {
+        margin-top: 30px;
+        padding: 10px;
+        font-size: 50px;
+    
+    }
+}
+
+.sidebar.active {
+    display: block; /* Show sidebar when active */
+    position: fixed; /* Keep it fixed */
+    z-index: 10; /* Make sure it appears above other content */
+    height: 100vh; /* Full height */
+}
+
+.sidebar.active .close-btn {
+    display: block; /* Show close button when sidebar is active */
+}
+
