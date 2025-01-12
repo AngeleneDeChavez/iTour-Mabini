@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+.mark-name {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mark-name:hover {
+    white-space: normal;
+    overflow: visible;
+}
+
+.locate, .del, .locate-button, .delete-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 16px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.locate:hover, .del:hover, .locate-button:hover {
+    opacity: 1;
+    background-color: rgb(220, 20, 20);
+}
+
+.locate-button {
+    padding: 8px 10px;
+    margin: 4px 0;
+    border-radius: 5%;
+    margin-left: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.locate-button {
+    background-color: #0054f0;
+}
+
+.locate-button:hover {
+    background-color: rgb(0, 36, 196);
+}
+
+.delete-button {
+    background-color: #dc3545;
+    padding: 8px 10px;
+    margin: 4px 0;
+    border-radius: 5%;
+    margin-left: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: rgb(153, 0, 0);
+}
+
+.container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 80%;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.map-container {
+    width: 70%;
+    margin-left: 30px;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+}
+
+.marker-container {
+    position: relative;
+    height: auto;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.marker-container > h1 {
+    text-align: center;
+    margin: 10px;
+}
+
+.marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 10px;
+    height: auto;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.input-group > input, .input-group > textarea, .input-group > input[type="file"] {
+    padding: 5px;
+    outline: none;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+#imageUpload{
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.marker > button {
+    width: 95%;
+    padding: 5px;
+    font-size: 17px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.marker > button:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+.marked > h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#markedLocations {
+    overflow-y: auto;
+    height: 300px;
+    list-style: none;
+}
+
+#markedLocations > li {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#markedLocations > li div {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 90%;
+}
+
+#markedLocations > li div button {
+    font-size: 16px;
+    color: rgb(0, 133, 18);
+    text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#markedLocations > li div button:hover {
+    color: rgb(88, 88, 255);
+    text-decoration: none;
+}
+
+#markedLocations > li > button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    margin-left: 20px;
+    color: rgb(220, 20, 20);
+    cursor: pointer;
+    width: 20px;
+}
+
+#markedLocations > li > button:hover {
+    background-color: rgb(220, 200, 200);
+    color: rgb(240, 10, 10);
+}
+
+.text {
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+}
+
+.list {
+    display: flex;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    background-color: #f7f7f7;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.list:hover {
+    background-color: #e2e2e2;
+    color: #002849;
+}
+
+.marked {
+    width: 100%;
+}
+
+.but {
+    display: absolute;
+    float: right;
+}
+
+.location-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.mark-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    flex: 1;
+    background-color: #ececec;
+    padding: 5px;
+    margin: 2px;
+    color: rgb(255, 255, 255);
+}
+
+.button-container {
+    display: flex;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#searchInput:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.8);
+}
+
+textarea {
+    width: 230px; /* Set the width */
+    padding: 5px;
+    outline: none;
+    font-size: 17px;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding is included in the width and height */
+    resize: none; /* Prevents resizing */
+}
+
+.status-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Status colors */
+#status {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+}
+
+#status.not_full {
+    background-color: green;
+    color: white;
+}
+
+#status.slightly_full {
+    background-color: orange;
+    color: white;
+}
+
+#status.full {
+    background-color: red;
+    color: white;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 1000; /* On top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4);
+    padding-bottom: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px; /* Max width for the modal */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Add some shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: auto;
+    position: relative;
+    padding-top: 50px;
+}
+
+.close {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    color: #888;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modalText {
+    text-align: left;
+    width: 100%;
+}
+
+#modalPetFriendly {
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    float: right;
+}
+
+#modalPetFriendly .fa-paw {
+    font-size: 40px;
+    color: #ff9900;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-bottom: 1px;
+}
+
+#modalImage {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.status-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.status-item {
+    display: flex;
+}
+
+.status-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#statusText {
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: middle;
+    margin-top: 4px;
+}
+
+.staticon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .map-container {
+        z-index: 1;
+        width: 100%;
+        height: 400px;
+        margin-left: 0;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    .marker-container {
+        width: 100%;
+        height: auto;
+    }
+    .status-item {
+        width: 100%;
+        padding-left: 11px;
+    }
+
+      
+      #statusText {
+        font-size: 20px;
+      }
+      
+      .status-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 20px; /* Optional: adds space between columns */
+    }
+    
+    #modalStatus {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+    }
+    
+    .status-circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #ccc; /* Default color */
+        margin-right: 10px;
+        margin-left: 130px;
+    }
+    
+    #statusText {
+        font-size: 20px;
+        color: black; /* Ensure this matches your design */
+    }
+    
+    #modalPetFriendly {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        margin-top: 10px;
+    }
+    
+    #modalPetFriendly .fa-paw {
+        font-size: 40px;
+        color: #ff9900;
+        margin-right: 10px;
+    }
+    
+      
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .map-container {
+        position: relative;
+        margin-top: 20px;
+        height: 100%;
+    }
+
+    .marker-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .map-container {
+        position: relative;
+        margin-top: 20px;
+        height: 100%;
+    }
+
+    .marker-container > h1 {
+        font-size: 24px;
+    }
+
+    .marker > button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .marked {
+        max-width: 100%;
+    }
+
+    .locate-button, .delete-button {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+
+    .mark-name {
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .mark-name:hover {
+        white-space: normal;
+        overflow: visible;
+    }
+}

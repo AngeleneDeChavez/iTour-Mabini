@@ -1,0 +1,55 @@
+<!-- code-verification.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Code Verification</title>
+  <script src="https://kit.fontawesome.com/cb01d7a304.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="code-verification.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="icon">
+      <a href="#"><i class="fas fa-arrow-left"></i></a> 
+    </div>
+    <div class="title">CODE VERIFICATION</div>
+    <div class="subtitle">Enter one-time code sent to your email.</div>
+    
+    <div class="input-container">
+      <input type="text" class="input-box" maxlength="1" id="code1">
+      <input type="text" class="input-box" maxlength="1" id="code2">
+      <input type="text" class="input-box" maxlength="1" id="code3">
+      <input type="text" class="input-box" maxlength="1" id="code4">
+    </div>
+    
+    <button class="verify-button" onclick="verifyCode()">Verify Code</button>
+  </div>
+
+  <script>
+    function verifyCode() {
+      var code = document.getElementById('code1').value + document.getElementById('code2').value + document.getElementById('code3').value + document.getElementById('code4').value;
+      var email = new URLSearchParams(window.location.search).get('email');
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "verify-code.php", true);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var response = JSON.parse(xhr.responseText);
+          if (response.success) {
+            alert("Code verified! Proceed to reset your password.");
+            window.location.href = "new-credentials.html?email=" + encodeURIComponent(email);
+          } else {
+            alert(response.message);
+          }
+        }
+      };
+      xhr.send("email=" + email + "&code=" + code);
+    }
+  </script>
+
+</body>
+</html>
